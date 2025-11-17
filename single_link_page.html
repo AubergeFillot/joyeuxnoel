@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Page — Un seul lien</title>
+  <meta name="description" content="Page minimaliste ne contenant qu'un seul lien" />
+  <style>
+    /* Reset rapide */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg,#0f172a,#071029);
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      color:#fff;
+      padding:1rem;
+    }
+
+    /* Conteneur centré */
+    .card{
+      text-align:center;
+      width:min(680px,100%);
+      padding:2.25rem;
+      border-radius:16px;
+      background:rgba(255,255,255,0.03);
+      box-shadow:0 6px 30px rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+    }
+
+    h1{font-size:1.25rem;margin-bottom:1rem}
+    p{font-size:0.95rem;margin-bottom:1.5rem;opacity:0.9}
+
+    /* Le lien unique, stylisé en bouton */
+    .single-link{
+      display:inline-block;
+      padding:0.9rem 1.6rem;
+      font-size:1.05rem;
+      font-weight:600;
+      text-decoration:none;
+      border-radius:12px;
+      background:linear-gradient(90deg,#06b6d4,#3b82f6);
+      color:inherit;
+      color:#021124;
+      transition:transform .18s ease,filter .18s ease;
+      box-shadow:0 8px 20px rgba(59,130,246,0.18), inset 0 -1px 0 rgba(255,255,255,0.12);
+    }
+    .single-link:active{transform:translateY(1px)}
+    .single-link:focus{outline:3px solid rgba(59,130,246,0.22);outline-offset:4px}
+    .single-link:hover{filter:brightness(1.05)}
+
+    /* Petit texte en bas (optionnel) */
+    .muted{margin-top:1.25rem;font-size:0.8rem;opacity:0.8}
+
+    @media (prefers-reduced-motion:reduce){
+      .single-link{transition:none}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <h1>Joyeux Noël !</h1>
+    <p>Noël avant l'heure avec un petit cadeau :)</p>
+
+    <!--
+      Modifie l'attribut href ci-dessous pour changer la destination.
+      - target="_blank" ouvre le lien dans un nouvel onglet (change si tu veux le même onglet).
+      - rel="noopener noreferrer" est recommandé pour la sécurité lors d'ouverture dans un nouvel onglet.
+    -->
+
+    <a id="main-link" class="single-link" href="https://fr.xgroovy.com/gay/gifs/397278/fuck-amp-kiss-gif-by-bertm379/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le lien principal">Par ici le cadeau !</a>
+
+    <div class="muted">J'espère tu vas kiffer</div>
+  </main>
+</body>
+</html>
